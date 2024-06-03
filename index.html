@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Images with Picture Element</title>
+    <title>Hajj Card Information</title>
     <link rel="icon" href="src/icon.png" type="image/x-icon">
     <style>
         body {
@@ -24,12 +24,9 @@
 </head>
 <body>
     <picture>
-        <!-- Для устройств с шириной экрана от 768 пикселей и выше -->
-        <source srcset="desktop-tablet-image.jpg" media="(min-width: 768px)">
-        <!-- Для устройств с шириной экрана меньше 768 пикселей -->
-        <source srcset="mobile-image.jpg" media="(max-width: 767px)">
-        <!-- Запасное изображение для браузеров, которые не поддерживают элемент picture -->
-        <img src="mobile-image.jpg" alt="Responsive Image">
+        <source srcset="src/1/desktop-tablet-image.jpg" media="(min-width: 768px)">
+        <source srcset="src/1/mobile-image.jpg" media="(max-width: 767px)">
+        <img src="src/1/mobile-image.jpg" alt="Responsive Image">
     </picture>
 </body>
 </html>
