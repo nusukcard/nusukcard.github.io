@@ -7,163 +7,132 @@
     <style>
         body {
             font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
-        .container {
+        .card {
+            width: 900px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .left, .right {
+            width: 50%;
+            padding: 20px;
+        }
+        .left {
+            background-color: #d3a05b;
+            color: white;
+        }
+        .left img {
+            display: block;
+            width: 120px;
+            height: 160px;
+            object-fit: cover;
+            margin-bottom: 20px;
+        }
+        .left div {
+            margin-bottom: 15px;
+        }
+        .left div span {
+            display: block;
+            font-weight: bold;
+        }
+        .right {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-color: #fff;
         }
-        .header, .footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 20px;
-            width: 100%;
+        .header {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-        .header img, .footer img {
-            height: 50px;
-        }
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 20px;
-        }
-        .profile {
-            background-color: #d3a05b;
-            padding: 20px;
-            border-radius: 10px;
-            width: 300px;
-            text-align: center;
-        }
-        .profile img {
+        .header img {
             width: 100px;
-            height: 100px;
-            border-radius: 50%;
-            margin-bottom: 10px;
         }
-        .profile div {
+        .section {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+        }
+        .section h3 {
+            margin-top: 0;
+        }
+        .section p {
             margin: 5px 0;
         }
-        .profile div span {
-            display: block;
+        .section p span {
             font-weight: bold;
         }
-        .info-table {
-            width: 100%;
-            max-width: 600px;
-            margin: 20px 0;
-            border-collapse: collapse;
-        }
-        .info-table th, .info-table td {
-            border: 1px solid #ccc;
-            padding: 10px;
-            text-align: center;
-        }
-        .info-table th {
-            background-color: #333;
-            color: #fff;
-        }
         .status {
-            padding: 10px;
-            background-color: #333;
-            color: #fff;
-            border-radius: 5px;
-            text-align: center;
             margin-top: 20px;
+            padding: 10px;
+            background-color: #d3a05b;
+            color: white;
+            text-align: center;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <img src="path/to/ministry_logo.png" alt="Ministry Logo">
-        <img src="path/to/nusuk_logo.png" alt="Nusuk Logo">
-    </div>
-    <div class="container">
-        <div class="content">
-            <div class="profile">
-                <img src="path/to/profile_picture.png" alt="Profile Picture">
-                <div>
-                    <span>Name (Arabic)</span>
-                    -
-                </div>
-                <div>
-                    <span>Name (English)</span>
-                    ELYORBEK KHAMDAMOV
-                </div>
-                <div>
-                    <span>Visa ID</span>
-                    6119893466
-                </div>
-                <div>
-                    <span>Border Number</span>
-                    6156272822
-                </div>
-                <div>
-                    <span>Nationality</span>
-                    Uzbekistan
-                </div>
-                <div>
-                    <span>Gender</span>
-                    Male
-                </div>
+    <div class="card">
+        <div class="left">
+            <img src="path/to/profile_picture.png" alt="Profile Picture">
+            <div>
+                <span>Name (Arabic)</span>
+                -
             </div>
-            <table class="info-table">
-                <tr>
-                    <th colspan="2">Service Information</th>
-                </tr>
-                <tr>
-                    <td>Service Provider</td>
-                    <td>رفاد لخدمات الحجاج</td>
-                </tr>
-                <tr>
-                    <td>Service Center</td>
-                    <td>ثابت زينبي هاشم مركز 51</td>
-                </tr>
-                <tr>
-                    <td>Service Center Contact</td>
-                    <td>966564621348</td>
-                </tr>
-                <tr>
-                    <td>Service Center Location</td>
-                    <td>مكه المكرمة - التكية - خلف سوق الراحة</td>
-                </tr>
-                <tr>
-                    <th colspan="2">Housing Information</th>
-                </tr>
-                <tr>
-                    <td>Housing Makkah Location</td>
-                    <td>تطوير الروابي العقارية شركة شخص واحد، بحجاج قرش</td>
-                </tr>
-                <tr>
-                    <td>Housing Mina Location</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>Housing Madinah Location</td>
-                    <td>-</td>
-                </tr>
-                <tr>
-                    <td>Housing Arafat Location</td>
-                    <td>-</td>
-                </tr>
-            </table>
+            <div>
+                <span>Name (English)</span>
+                ELYORBEK KHAMDAMOV
+            </div>
+            <div>
+                <span>Visa ID</span>
+                6119893466
+            </div>
+            <div>
+                <span>Border Number</span>
+                6156272822
+            </div>
+            <div>
+                <span>Nationality</span>
+                Uzbekistan
+            </div>
+            <div>
+                <span>Gender</span>
+                Male
+            </div>
+        </div>
+        <div class="right">
+            <div class="header">
+                <img src="path/to/ministry_logo.png" alt="Ministry Logo">
+                <img src="path/to/nusuk_logo.png" alt="Nusuk Logo">
+            </div>
+            <div class="section">
+                <h3>Service Information</h3>
+                <p><span>Service Provider:</span> رفاد لخدمات الحجاج</p>
+                <p><span>Service Center:</span> ثابت زينبي هاشم مركز 51</p>
+                <p><span>Service Center Contact:</span> 966564621348</p>
+                <p><span>Service Center Location:</span> مكه المكرمة - التكية - خلف سوق الراحة</p>
+            </div>
+            <div class="section">
+                <h3>Housing Information</h3>
+                <p><span>Housing Makkah Location:</span> تطوير الروابي العقارية شركة شخص واحد، بحجاج قرش</p>
+                <p><span>Housing Mina Location:</span> -</p>
+                <p><span>Housing Madinah Location:</span> -</p>
+                <p><span>Housing Arafat Location:</span> -</p>
+            </div>
             <div class="status">
                 Visa Status: ACTIVE
             </div>
         </div>
-    </div>
-    <div class="footer">
-        <img src="path/to/ministry_logo.png" alt="Ministry Logo">
-        <img src="path/to/nusuk_logo.png" alt="Nusuk Logo">
     </div>
 </body>
 </html>
