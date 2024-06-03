@@ -14,32 +14,21 @@
             background-color: #f0f0f0;
         }
 
-        .image {
-            display: none;
+        img {
             max-width: 100%;
             height: auto;
         }
-
-        /* Для компьютеров и планшетов */
-        @media (min-width: 768px) {
-            .desktop-tablet {
-                display: block;
-            }
-        }
-
-        /* Для смартфонов */
-        @media (max-width: 767px) {
-            .mobile {
-                display: block;
-            }
-        }
     </style>
-    <title>Responsive Images</title>
+    <title>Responsive Images with Picture Element</title>
 </head>
 <body>
-    <!-- Изображение для компьютеров и планшетов -->
-    <img src="desktop-tablet-image.jpg" alt="Desktop and Tablet Image" class="image desktop-tablet">
-    <!-- Изображение для смартфонов -->
-    <img src="mobile-image.jpg" alt="Mobile Image" class="image mobile">
+    <picture>
+        <!-- Для устройств с шириной экрана от 768 пикселей и выше -->
+        <source srcset="desktop-tablet-image.jpg" media="(min-width: 768px)">
+        <!-- Для устройств с шириной экрана меньше 768 пикселей -->
+        <source srcset="mobile-image.jpg" media="(max-width: 767px)">
+        <!-- Запасное изображение для браузеров, которые не поддерживают элемент picture -->
+        <img src="mobile-image.jpg" alt="Responsive Image">
+    </picture>
 </body>
 </html>
