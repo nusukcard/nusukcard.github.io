@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hajj Card Information</title>
+    <link rel="icon" href="src/icon.png" type="image/x-icon">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ffffff;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <picture>
+        <source srcset="src/1/desktop-tablet-image.jpg" media="(min-width: 768px)">
+        <source srcset="src/1/mobile-image.jpg" media="(max-width: 767px)">
+        <img src="src/1/mobile-image.jpg" alt="Responsive Image">
+    </picture>
+</body>
+</html>
