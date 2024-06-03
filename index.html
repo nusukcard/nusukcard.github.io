@@ -9,49 +9,102 @@
             font-family: Arial, sans-serif;
             background-color: #4B371C;
             color: white;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
-            margin: 0;
         }
-        .card {
-            background-color: #3D2A15;
-            padding: 20px;
+        .container {
+            background-color: #4B371C;
+            color: white;
+            width: 360px;
             border-radius: 10px;
-            width: 300px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+        .header {
+            background-color: #3D2A15;
+            padding: 10px;
+            text-align: right;
+        }
+        .header img {
+            width: 40px;
+            vertical-align: middle;
+        }
+        .profile {
             text-align: center;
+            padding: 20px;
         }
-        .card img {
+        .profile img {
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
-            width: 150px;
-            height: 150px;
+            border: 2px solid #fff;
         }
-        .info {
-            margin-top: 20px;
+        .details {
+            padding: 20px;
+            background-color: #3D2A15;
         }
-        .info div {
+        .details div {
             margin-bottom: 10px;
         }
+        .details div strong {
+            display: block;
+            margin-bottom: 5px;
+        }
         .footer {
-            margin-top: 20px;
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
             font-size: 12px;
+        }
+        .footer div {
+            margin-bottom: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="card">
-        <img src="profile.jpg" alt="Profile Picture">
-        <div class="info">
-            <div><strong>Name (English):</strong> ELYORBEK KHAMDAMOV</div>
-            <div><strong>Visa ID:</strong> 6119893466</div>
-            <div><strong>Border Number:</strong> 6156272822</div>
-            <div><strong>Nationality:</strong> Uzbekistan</div>
-            <div><strong>Gender:</strong> Male</div>
+    <div class="container">
+        <div class="header">
+            <span>11:29</span>
+            <img src="signal_icon.png" alt="Signal">
+            <img src="wifi_icon.png" alt="WiFi">
+            <img src="battery_icon.png" alt="Battery">
+        </div>
+        <div class="profile">
+            <img src="profile.jpg" alt="Profile Picture">
+        </div>
+        <div class="details">
+            <div>
+                <strong>Name (Arabic)</strong>
+                <span>-</span>
+            </div>
+            <div>
+                <strong>Name (English)</strong>
+                <span>ELYORBEK KHAMDAMOV</span>
+            </div>
+            <div>
+                <strong>Visa ID</strong>
+                <span>6119893466</span>
+            </div>
+            <div>
+                <strong>Border Number</strong>
+                <span>6156272822</span>
+            </div>
+            <div>
+                <strong>Nationality</strong>
+                <span>Uzbekistan</span>
+            </div>
+            <div>
+                <strong>Gender</strong>
+                <span>Male</span>
+            </div>
         </div>
         <div class="footer">
-            <p>Ministry of Hajj and Umrah</p>
-            <p>nusukcard.haj.gov.sa</p>
+            <div>Ministry of Hajj and Umrah</div>
+            <div>nusukcard.haj.gov.sa</div>
         </div>
     </div>
 </body>
